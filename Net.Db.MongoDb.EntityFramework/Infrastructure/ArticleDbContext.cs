@@ -26,17 +26,6 @@ internal class ArticleDbContext : DbContext
     {
         base.OnModelCreating(modelBuilder);
         modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
-
-        /*
-        var ArticleModelBuilder = modelBuilder.Entity<Article>().ToCollection("Articles");
-
-        ArticleModelBuilder.HasKey(x => x.ArticleId);
-
-        ArticleModelBuilder.OwnsOne(x => x.Current);
-        ArticleModelBuilder.OwnsMany(x => x.History);
-
-        //BlogModelBuilder.HasIndex(x => x.Current.Title);
-        */
     }
 }
 
